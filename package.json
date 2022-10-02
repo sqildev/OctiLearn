@@ -1,0 +1,13 @@
+{
+  "name": "octilearn",
+  "version": "1.0.0",
+  "description": "TBA",
+  "main": "index.js",
+  "repository": "https://github.com/OctiLearnTeam/OctiLearn.git",
+  "author": "Krish, Krit, Jayden",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  },
+  "start": "concurrently \"yarn dev\" \"cd ./backend\" \"yarn develop\""
+}

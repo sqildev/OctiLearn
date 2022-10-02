@@ -3,9 +3,9 @@ import React from "react";
 const Courses = ({ courses }) => {
   return (
     <div>
-      {courses.data.map(course => {
+      {courses.data.map((course,i) => {
           return (
-              <div><h1>{course.attributes.title}</h1>
+              <div key={i}><h1>{course.attributes.title}</h1>
               <p>{course.attributes.description}</p></div>
           )
       })}

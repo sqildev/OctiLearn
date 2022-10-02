@@ -6,8 +6,10 @@
   "repository": "https://github.com/OctiLearnTeam/OctiLearn.git",
   "author": "Krish, Krit, Jayden",
   "license": "MIT",
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^7.4.0"
   },
-  "start": "concurrently \"yarn dev\" \"cd ./backend\" \"yarn develop\""
+  "scripts": {
+    "start": "concurrently \"cd backend && yarn develop\" \"cd frontend && yarn dev\""
+  }
 }

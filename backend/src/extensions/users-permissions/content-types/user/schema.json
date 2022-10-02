@@ -64,7 +64,11 @@
       "configurable": false
     },
     "userRole": {
-      "type": "string"
+      "type": "enumeration",
+      "enum": [
+        "student",
+        "teacher"
+      ]
     }
   }
 }

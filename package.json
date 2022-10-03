@@ -11,5 +11,6 @@
   },
   "scripts": {
     "start": "concurrently \"cd backend && yarn develop\" \"cd frontend && yarn dev\""
-  }
+  },
+  "dependencies": {}
 }

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Navbar() {
   return (
-    <div className="z-50 shadow-md fixed top-0 right-0 left-0 px-4 py-2.5 bg-gray-800 text-white flex justify-between align-center">
+    <div className="z-50 shadow-lg fixed top-0 right-0 left-0 px-4 py-2.5 bg-gray-800 text-white flex justify-between align-center">
       <Link href="/">
         <button className="text-xl">
           <a>OctiLearn</a>

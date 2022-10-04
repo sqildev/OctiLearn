@@ -1,12 +1,12 @@
 import axios from "axios";
 import React from "react";
 
-const createLesson = ({refreshData}) => {
+const createLesson = ({ refreshData }) => {
   const [name, setName] = React.useState("");
   const [description, setDescription] = React.useState("");
 
   const addLesson = () => {
-    axios.post("https://pwufnt-1337.preview.csb.app/api/courses", {
+    axios.post(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/courses`, {
       data: {
         title: name,
         description: description,

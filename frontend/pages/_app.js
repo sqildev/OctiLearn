@@ -1,13 +1,10 @@
 import React from "react";
-import Layout from "../components/Layout";
-import '../styles/globals.css';
+import "../styles/globals.css";
+import wrapper from "../state/store";
 
-const App = ({Component, pageProps}) => {
-    return(
-      <Layout className="w-5/6 m-auto">
-        <Component {...pageProps}/>
-      </Layout>
-    )
-}
-
-export default App;
+const App = ({ Component, pageProps }) => {
+  const getLayout = Component.getLayout || ((page) => page);
+  return getLayout(<Component {...pageProps} />);
+};
+//export default App
+export default wrapper.withRedux(App);

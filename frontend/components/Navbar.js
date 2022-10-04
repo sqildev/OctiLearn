@@ -1,33 +1,33 @@
-import React from 'react';
-import Link from 'next/link';
+import React from "react";
+import Link from "next/link";
 
 function Navbar() {
   return (
     <div className="z-50 shadow-md fixed top-0 right-0 left-0 px-4 py-2.5 bg-gray-800 text-white flex justify-between align-center">
-      <div className="text-xl">
-        <Link href="/">
+      <Link href="/">
+        <button className="text-xl">
           <a>OctiLearn</a>
+        </button>
+      </Link>
+      <div className="flex items-center">
+        <Link href="/lessons">
+          <button className="ml-8">
+            <a>Lessons</a>
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className="ml-8">
+            <a>About</a>
+          </button>
+        </Link>
+        <Link href="/login">
+          <button className="ml-8 bg-blue-600 py-1 px-6 rounded-md">
+            <a>Login</a>
+          </button>
         </Link>
       </div>
-      <div className="flex items-center">
-        <div className="ml-8">
-          <Link href="/LessonsPage">
-            <a>Lessons</a>
-          </Link>
-        </div>
-        <div className="ml-8">
-          <Link href="/">
-            <a>About</a>
-          </Link>
-        </div>
-        <div className="ml-8 bg-blue-600 py-1 px-6 rounded-md">
-          <Link href="/auth">
-            <a>Login</a>
-          </Link>
-        </div>
-      </div>
     </div>
-  )
+  );
 }
 
 export default Navbar;

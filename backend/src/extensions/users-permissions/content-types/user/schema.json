@@ -69,6 +69,9 @@
         "student",
         "teacher"
       ]
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

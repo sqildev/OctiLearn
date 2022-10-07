@@ -20,7 +20,7 @@ const LessonsPage = ({ lessons, error }) => {
   const refreshData = () => router.replace(router.asPath);
   return (
     <div>
-      <Lessons lessons={lessons} />
+      <Lessons lessons={lessons}/>
       <CreateLesson refreshData={refreshData} />
     </div>
   );

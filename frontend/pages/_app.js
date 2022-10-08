@@ -1,5 +1,5 @@
-import React from "react";
-import Head from "next/head";
+ import React from "react";
+//import Head from "next/head";
 import "../styles/globals.css";
 
 import store from "../state/store";

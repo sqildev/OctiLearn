@@ -21,14 +21,20 @@
     "teacher": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::writer.writer",
-      "inversedBy": "courses"
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "coursesOwned"
     },
     "students": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::student.student",
-      "mappedBy": "courses"
+      "relation": "oneToMany",
+      "target": "plugin::users-permissions.user",
+      "mappedBy": "coursesEnrolled"
+    },
+    "units": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::unit.unit",
+      "mappedBy": "course"
     }
   }
 }

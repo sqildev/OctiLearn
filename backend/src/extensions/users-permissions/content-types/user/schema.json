@@ -72,6 +72,18 @@
     },
     "name": {
       "type": "string"
+    },
+    "coursesOwned": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::course.course",
+      "mappedBy": "teacher"
+    },
+    "coursesEnrolled": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "students"
     }
   }
 }

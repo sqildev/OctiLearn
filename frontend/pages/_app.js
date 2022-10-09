@@ -1,9 +1,10 @@
- import React from "react";
-//import Head from "next/head";
+import React from "react";
 import "../styles/globals.css";
-
 import store from "../state/store";
 import { Provider } from "react-redux";
+
+import './codemirror/lib/codemirror.css';
+import "./codemirror/theme/dracula.css"
 
 const App = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => page);

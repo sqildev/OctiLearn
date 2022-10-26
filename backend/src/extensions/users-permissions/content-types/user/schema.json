@@ -81,7 +81,7 @@
     },
     "coursesEnrolled": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::course.course",
       "inversedBy": "students"
     }

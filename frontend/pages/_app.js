@@ -2,15 +2,16 @@ import React from "react";
 import "../styles/globals.css";
 import store from "../state/store";
 import { Provider } from "react-redux";
+import Head from "next/head";
 
-import './codemirror/lib/codemirror.css';
-import "./codemirror/theme/dracula.css"
+import "codemirror/lib/codemirror.css";
+import "codemirror/theme/dracula.css";
 
 const App = ({ Component, pageProps }) => {
   const getLayout = Component.getLayout || ((page) => page);
   return (
     <Provider store={store}>
-      {/*<Head>
+      <Head>
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -18,7 +19,7 @@ const App = ({ Component, pageProps }) => {
           crossOrigin="anonymous"
           referrerpolicy="no-referrer"
         />
-      </Head>*/}
+      </Head>
       {getLayout(<Component {...pageProps} />)}
     </Provider>
   );

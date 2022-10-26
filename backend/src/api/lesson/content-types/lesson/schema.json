@@ -4,7 +4,8 @@
   "info": {
     "singularName": "lesson",
     "pluralName": "lessons",
-    "displayName": "Lesson"
+    "displayName": "Lesson",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -19,6 +20,15 @@
       "relation": "manyToOne",
       "target": "api::unit.unit",
       "inversedBy": "lessons"
+    },
+    "instructions": {
+      "type": "text"
+    },
+    "output": {
+      "type": "text"
+    },
+    "starterCode": {
+      "type": "text"
     }
   }
 }

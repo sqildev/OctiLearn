@@ -18,6 +18,8 @@ function Navbar() {
         name: "",
         userRole: "",
         jwt: "",
+        coursesEnrolled: [],
+        coursesOwned: [],
       })
     );
   };
@@ -30,11 +32,13 @@ function Navbar() {
         </button>
       </Link>
       <div className="flex items-center">
-        <Link href="/lessons">
-          <button className="ml-8">
-            <a>Lessons</a>
-          </button>
-        </Link>
+        {user.id && (
+          <Link href="/courses">
+            <button className="ml-8">
+              <a>Courses</a>
+            </button>
+          </Link>
+        )}
         <Link href="/about">
           <button className="ml-8">
             <a>About</a>

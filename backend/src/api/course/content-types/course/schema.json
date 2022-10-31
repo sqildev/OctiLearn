@@ -26,9 +26,17 @@
     },
     "students": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
       "mappedBy": "coursesEnrolled"
+    },
+    "code": {
+      "required": true,
+      "unique": true,
+      "type": "integer"
+    },
+    "public": {
+      "type": "boolean"
     },
     "units": {
       "type": "relation",
